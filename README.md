@@ -4,7 +4,7 @@
 ### vue demo
 
 ### other demo
-[nginx跨域](https://github.com/houhoz/demo)
+[nginx跨域](https://github.com/houhoz/demo/tree/master/nginx-cross)
 
 
 
