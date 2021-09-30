@@ -1,0 +1,12 @@
+@charset "UTF-8";
+.testing {
+  width: 71.42857%; }
+
+img {
+  width: 1000px; }
+
+.icon {
+  display: block;
+  width: 50px;
+  height: 50px;
+  background: url("./../images/支付宝认证.png"); }
