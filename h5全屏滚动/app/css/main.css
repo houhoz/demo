@@ -1,0 +1,184 @@
+@charset "UTF-8";
+html,
+body {
+  width: 100%;
+  height: 100%; }
+
+@font-face {
+  font-family: 'my-custom-icon-font';
+  src: url("../fonts/my-custom-icon-font.eot?90099692");
+  src: url("../fonts/my-custom-icon-font.eot?90099692#iefix") format("embedded-opentype"), url("../fonts/my-custom-icon-font.woff?90099692") format("woff"), url("../fonts/my-custom-icon-font.ttf?90099692") format("truetype"), url("../fonts/my-custom-icon-font.svg?90099692#my-custom-icon-font") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "my-custom-icon-font";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */ }
+
+.icon-note:before {
+  content: '\e800'; }
+
+/* '' */
+.icon-angle-double-up:before {
+  content: '\e801'; }
+
+/* '' */
+.loading {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: url(../images/loading.svg) no-repeat center #000000;
+  background-size: 8rem 6.4rem;
+  z-index: 9999; }
+  .loading .loading-p {
+    width: 100%;
+    position: absolute;
+    color: #ffffff;
+    font-size: 1rem;
+    text-align: center;
+    bottom: 10%; }
+
+.up-arrow {
+  width: 1rem;
+  height: 1rem;
+  position: fixed;
+  bottom: 1rem;
+  left: 50%;
+  transform: translate3d(-50%, 0, 0);
+  z-index: 999;
+  background: none;
+  border: none;
+  padding: 0;
+  animation: upArrowAni 2s infinite linear; }
+  .up-arrow i {
+    width: 1rem;
+    height: 1rem;
+    text-align: center;
+    line-height: 1rem;
+    color: #fff;
+    font-size: 0.75rem; }
+
+@keyframes upArrowAni {
+  0% {
+    opacity: 0;
+    transform: translate3d(-50%, 30%, 0); }
+  30% {
+    opacity: 1;
+    transform: translate3d(-50%, -20%, 0); }
+  60% {
+    opacity: 0;
+    transform: translate3d(-50%, -35%, 0); }
+  100% {
+    opacity: 0;
+    transform: translate3d(-50%, -50%, 0); } }
+
+.btn-music {
+  width: 1rem;
+  height: 1rem;
+  background-color: transparent;
+  position: fixed;
+  top: 0.2rem;
+  right: 0.2rem;
+  z-index: 999;
+  border: 0.1rem solid #fff;
+  border-radius: 50%;
+  padding: 0;
+  animation: btnMusicAni 3s infinite linear; }
+  .btn-music i {
+    width: 1rem;
+    height: 1rem;
+    text-align: center;
+    line-height: 1rem;
+    color: #fff;
+    font-size: 0.5rem;
+    position: absolute;
+    top: -0.125rem;
+    left: -0.125rem; }
+  .btn-music.paused {
+    opacity: 0.4;
+    animation: none; }
+
+@keyframes btnMusicAni {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+
+.swiper-container {
+  width: 100%;
+  height: 100%; }
+  .swiper-container .swiper-wrapper .swiper-slide {
+    width: 100%;
+    height: 100%;
+    position: relative; }
+    .swiper-container .swiper-wrapper .swiper-slide.slide-1 {
+      background-color: #e88a63; }
+      .swiper-container .swiper-wrapper .swiper-slide.slide-1 .item-image {
+        width: 100%;
+        height: 8rem;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-image: url("../images/github-1.png"); }
+      .swiper-container .swiper-wrapper .swiper-slide.slide-1 .item-text {
+        width: 100%;
+        color: #fff;
+        font-size: 0.8rem;
+        font-weight: bold;
+        text-align: center; }
+    .swiper-container .swiper-wrapper .swiper-slide.slide-2 {
+      background-color: #5cc2f1; }
+      .swiper-container .swiper-wrapper .swiper-slide.slide-2 .item-image {
+        width: 100%;
+        height: 8rem;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-image: url("../images/github-2.png"); }
+      .swiper-container .swiper-wrapper .swiper-slide.slide-2 .item-text {
+        width: 100%;
+        color: #fff;
+        font-size: 0.8rem;
+        font-weight: bold;
+        text-align: center; }
+    .swiper-container .swiper-wrapper .swiper-slide.slide-3 {
+      background-color: #9993c1; }
+      .swiper-container .swiper-wrapper .swiper-slide.slide-3 .item-image {
+        width: 100%;
+        height: 8rem;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-image: url("../images/github-3.png"); }
+      .swiper-container .swiper-wrapper .swiper-slide.slide-3 .item-text {
+        width: 100%;
+        color: #fff;
+        font-size: 0.8rem;
+        font-weight: bold;
+        text-align: center; }

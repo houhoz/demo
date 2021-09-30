@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+    <title>H5全屏滚动</title>
+    <!--build:css css/styles.min.css-->
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/swiper.min.css">
+    <link rel="stylesheet" href="./css/animate.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <!--endbuild-->
+
+</head>
+
+<body>
+    <div class="loading">
+        <p class="loading-p">0%</p>
+    </div>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <section class="swiper-slide slide-1">
+                <div class="item-image ani" swiper-animate-effect="slideInLeft" swiper-animate-duration="1s" swiper-animate-delay="0s"></div>
+                <p class="item-text ani" swiper-animate-effect="slideInRight" swiper-animate-duration="1s" swiper-animate-delay="0.3s">I'm a coder!</p>
+            </section>
+            <section class="swiper-slide slide-2">
+                <div class="item-image ani" swiper-animate-effect="bounceInDown" swiper-animate-duration="1s" swiper-animate-delay="0s"></div>
+                <p class="item-text ani" swiper-animate-effect="bounceInUp" swiper-animate-duration="1s" swiper-animate-delay="0.3s">I'm a coder!</p>
+            </section>
+            <section class="swiper-slide slide-3">
+                <div class="item-image ani" swiper-animate-effect="flipInX" swiper-animate-duration="1s" swiper-animate-delay="0s"></div>
+                <p class="item-text ani" swiper-animate-effect="flipInY" swiper-animate-duration="1s" swiper-animate-delay="0.3s">I'm a coder!</p>
+            </section>
+        </div>
+    </div>
+    <button class="up-arrow">
+        <i class="icon-angle-double-up"></i>
+    </button>
+    <button class="btn-music">
+        <i class="icon-note"></i>
+    </button>
+    <audio loop>
+        <source src="./audios/background.mp3" type="audio/mpeg">
+    </audio>
+
+</body>
+<!--build:js js/main.min.js -->
+<script src="./js/rem.js"></script>
+<script src="./js/jquery-1.9.1.min.js"></script>
+<script src="./js/swiper.min.js"></script>
+<script src="./js/swiper.animate.min.js"></script>
+<script src="./js/main.js"></script>
+<!-- endbuild -->
+
+</html>
