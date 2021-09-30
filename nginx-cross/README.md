@@ -1,2 +1,1 @@
-## nginx 初识
-### nginx 前端跨域
+### nginx跨域
