@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>实例事件</title>
+    <script src="./../assets/js/vue.js"></script>
+</head>
+
+<body>
+    <h1>实例事件</h1>
+    <hr>
+    <div id="app">
+        {{num}}
+        <p><button @click="add">ADD</button></p>
+    </div>
+    <p><button onclick="reduce()">reduce</button></p>
+    <p><button onclick="reduceOnce()">reduceOnce</button></p>
+    <p><button onclick="off()">关闭</button></p>
+</body>
+<script>
+    //实例化
+    //绑定一个生成器
+    var app = new Vue({
+        el: '#app',
+        data: {
+            num: 1
+        },
+        methods: {
+            add: function() {
+                this.num++
+            }
+        }
+    });
+    app.$on("reduce", function() {
+        console.log("执行reduce方法");
+        this.num--
+    });
+
+
+    function reduce() {
+        app.$emit('reduce')
+    }
+    app.$once("reduceOnce", function() {
+        console.log("执行reduce方法");
+        this.num--
+    });
+
+    function reduceOnce() {
+        app.$emit('reduceOnce')
+    }
+    //关闭事件
+    function off() {
+        app.$off('reduce');
+    }
+</script>
+
+</html>

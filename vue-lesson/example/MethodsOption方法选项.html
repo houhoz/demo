@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MethodsOption方法选项</title>
+    <script src="./../assets/js/vue.js"></script>
+</head>
+
+<body>
+    <h1>MethodsOption方法选项</h1>
+    <hr>
+    <div id="app">
+        {{a}}
+        <p><button @click="add(2,$event)">add</button></p>
+        <p>
+            <btn @click.native="add(2)"></btn>
+        </p>
+    </div>
+    <button onclick="app.add(3)">外部ADD</button>
+</body>
+<script>
+    var btn = {
+        template: `<button>组件ADD</button>`,
+    };
+    //实例化
+    //绑定一个生成器
+    var app = new Vue({
+        el: '#app',
+        data: {
+            a: 1
+        },
+        components: {
+            "btn": btn
+        },
+        methods: {
+            add: function(num, event) {
+                if (num != "") {
+                    this.a += num;
+                } else {
+                    this.a++
+                };
+                console.log(event)
+            }
+        }
+    })
+</script>
+
+</html>

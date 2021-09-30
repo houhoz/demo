@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mixins混入选项操作</title>
+    <script src="./../assets/js/vue.js"></script>
+</head>
+
+<body>
+    <h1>Mixins混入选项操作</h1>
+    <hr>
+    <div id="app">
+        {{num}}
+        <p><button @click="add">ADD</button></p>
+    </div>
+</body>
+<script>
+    var addConsole = {
+        updated: function() {
+            console.log('数据变化' + this.num);
+        }
+    };
+    Vue.mixin({
+        updated: function() {
+            console.log('woshi全局')
+        }
+    });
+    //实例化
+    //绑定一个生成器
+    var app = new Vue({
+        el: '#app',
+        data: {
+            num: 1
+        },
+        methods: {
+            add: function() {
+                this.num++
+            }
+        },
+        updated: function() {
+            console.log("woshi原生")
+        },
+        mixins: [
+            addConsole
+        ]
+    })
+</script>
+
+</html>
